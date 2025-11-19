@@ -5,19 +5,17 @@ metadata:
   labels:
     app: myapp
     type: front-end
-    tier: front-end
 spec:
   replicas: 6  # might differ from existing pods
   selector:
     matchLabels:
-      tier: front-end
+      type: front-end
   template:
     metadata:
       name: myapp-pod
       labels:
         app: myapp
         type: front-end
-        tier: front-end
     spec:
       containers:
         - name: nginx-container
