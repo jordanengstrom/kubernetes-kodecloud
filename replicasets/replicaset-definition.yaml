@@ -5,12 +5,12 @@ metadata:
   labels:
     app: myapp
     type: front-end
-spec:
+spec:  # creates a ReplicaSet
   replicas: 6  # might differ from existing pods
   selector:
     matchLabels:
       type: front-end
-  template:
+  template:  # pod template for ReplicaSet
     metadata:
       name: myapp-pod
       labels:
